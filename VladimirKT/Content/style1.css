@@ -1,0 +1,171 @@
+.pe-thumbs{
+	width: 900px;
+	height: 400px;
+	margin: 20px auto;
+	position: relative;
+	background: transparent url(Images/1.jpg) center center;
+	border: 5px solid #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.pe-thumbs:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(53,125,176, 0.2);
+}
+.pe-thumbs li{
+	float:left;
+	position: relative;
+}
+.pe-thumbs li a,
+.pe-thumbs li a img{
+	display: block;
+	position: relative;
+}
+.pe-thumbs li a img{
+	width: 100px;
+	opacity: 0.3;
+}
+.pe-thumbs li a div.pe-description{
+	width: 200px;
+	height: 100px;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 0px;
+	left: -200px;
+	color: white;
+	display: none;
+	z-index: 1001;
+}
+
+#navBarAbout li { 
+	float: left;
+	text-decoration: none;
+	margin-right: 5px;
+	list-style-type: none;
+	color: white;
+}
+
+/*#navDiv {
+	position:absolute;
+	left: 0px;
+	top: 0px;
+}*/
+
+/*#aboutRow {
+
+	position: relative;
+	margin: auto;
+
+}*/
+
+#page {
+	background: #000000; /* Old browsers */
+	background: -moz-linear-gradient(top, #000000 54%, #45484d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #000000 54%,#45484d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #000000 54%,#45484d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+}
+
+#dashDiv {
+
+	margin: auto;
+}
+
+#sectionDiv {
+	/*height: 600px;*/
+	width: auto;
+	/*margin-top: 20px;*/
+	text-align: center;
+	position: relative;
+}
+
+#sectionImage {
+	/*margin: 30px 0 auto auto;*/
+	height: 430px;
+	padding: 40px 0 40px 0;
+}
+
+#vladFoo {
+	color: black;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#linkDiv {
+
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+
+#aboutTab {
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-top: 20px;
+	margin-bottom: 40px;*/
+	/*height: 100%;*/
+}
+
+#aboutRow {
+	position: relative;
+	padding: 30px 0 25px 0;
+	border-bottom: 1px solid white;
+}
+
+#personalTab {
+	
+	width: auto;
+	
+}
+
+#profesionalTab {
+	/*height: 430px;*/
+	width: auto;
+
+}
+
+a {
+	color: #428bca;
+	text-decoration: none;
+}
+
+#personalText {
+
+	height: 430px;
+	text-align: left;
+	color: white;
+	padding: 40px 0 40px 0;
+}
+
+#profesionalText {
+
+	height: 430px;
+	text-align: left;
+	color: white;
+	padding: 40px 0 40px 0;
+}
+
+.otherColor #profesionalText {
+	color: aqua;
+}
+
+#firm,
+#workingHistory,
+#skills,
+#education,
+#higher,
+#krojac,
+#it,
+#namePersonal,
+#i1, #i2, #i3, #i4, #i4, #i5, #i6, #i7, #i8, #i9, #i10, #i11, #i12, #i13,
+#webDev,
+#jadranka,
+#parents,
+#natasa,
+#ena {
+	color: yellow;
+}

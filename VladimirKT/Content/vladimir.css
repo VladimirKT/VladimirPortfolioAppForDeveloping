@@ -1,0 +1,253 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Lato'); 
+
+body {
+	min-height: 100%;
+}
+
+#vladBody {
+	background: #000000; /* Old browsers */
+	background: -moz-linear-gradient(top, #000000 54%, #45484d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #000000 54%,#45484d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #000000 54%,#45484d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+}
+
+#indexRow {
+
+	width: 100%;
+	height: 500px;
+	/*border: 1px solid grey;*/
+	position: relative;
+	margin: 0 0 40px 0;
+	padding: 20px 0 20px 0;
+
+}
+
+
+#central {
+	padding: 20px;
+	margin: auto;
+	/*box-shadow: 1px 1px grey;*/
+	width: 100%;
+	height: 500px;
+	position: relative;
+	vertical-align: middle;
+	/*text-align: center;*/
+	vertical-align: middle;
+	/*border: 1px dashed grey;*/
+	opacity: 0;
+	
+	display: block;
+	/*background: black;*/
+	/*border-radius: 100%;*/
+	/*background-image: url("Images/pages/me.png");*/
+	/*background-repeat: no-repeat;*/
+	/*border: 1px solid grey;*/
+}
+
+/*#centralText {
+	position: absolute;
+	bottom: -1%;
+	right: 30%;
+	width: 200px;
+	height: 20px;
+	background-color: chartreuse;
+	text-align: center;
+	margin: 2px;
+	transform: translateY(-50%);
+}*/
+#mainImage1 {
+	opacity: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#mainImage2 {
+	opacity: 1;
+	position: absolute;
+	left: 666px;
+	top: 0;
+}
+
+#mainImage3 {
+	opacity: 1;
+	position: absolute;
+	left: 1332px;
+	top: 0;
+}
+
+#mainImage4 {
+	opacity: 1;
+	position: absolute;
+	left: 1998px;
+	top: 0;
+}
+
+#mask1 {
+	opacity: 0.6;
+	position: absolute;
+	left: 200px;
+	top: 0;
+	background-color: black;
+	height: 500px;
+	width:300px;
+}
+
+#mask2 {
+	opacity: 0.8;
+	position: absolute;
+	left: 550px;
+	top: 0;
+	background-color: black;
+	height: 500px;
+	width: 200px;
+}
+
+#mask3 {
+	opacity: 0.9;
+	position: absolute;
+	left: 850px;
+	top: 0;
+	background-color: black;
+	height: 500px;
+	width: 200px;
+}
+
+#mask4 {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: none;
+	height: 100px;
+	width: 500px;
+	color: yellowgreen;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	padding: 0;
+	line-height: 100px;
+	z-index: 1;
+}
+
+#mask5 {
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	top: 80%;
+	background-color: cadetblue;
+	height: 100px;
+	width: 500px;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	padding: 0;
+	line-height: 100px;
+}
+
+
+#mask6 {
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	background-color: none;
+	height: 100px;
+	width: 500px;
+	color: yellowgreen;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	padding: 0;
+	line-height: 100px;
+	z-index: 1;
+}
+
+#mask7 {
+	opacity: 0.5;
+	position: absolute;
+	left: 500px;
+	top: 0%;
+	background-color: cadetblue;
+	height: 100px;
+	width: 700px;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	padding: 0;
+	line-height: 100px;
+}
+
+#mask8 {
+	opacity: 0.5;
+	position: absolute;
+	left: 300px;
+	top: 50%;
+	background-color: orangered;
+	height: 100px;
+	width: 300px;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	padding: 0;
+	line-height: 100px;
+}
+
+#mask9 {
+	opacity: 0.5;
+	position: absolute;
+	/*left: 90%;*/
+	/*top: 75%;*/
+	bottom:0;
+	right: 0;
+	background-color: orangered;
+	height: 200px;
+	width: 100px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	line-height: 100px;
+}
+
+#namePersonal {
+	opacity: 1;
+	margin: auto;
+	font-family: 'Libre Barcode 39 Text', cursive !important;
+}
+
+#nameProfesional {
+	opacity: 1;
+	margin: auto;
+	font-family: 'Libre Barcode 39 Text', cursive !important;
+}
+
+#aboutApp {
+	font-family: 'Lato', sans-serif;
+	height: 550px;
+}
+#navBar li {
+	float: left;
+	text-decoration: none;
+	margin-right: 5px;
+	list-style-type: none;
+	font-family: 'Lato', sans-serif;
+}
+
+#navDiv {
+	position:absolute;
+	left:-20px;
+	top: -30px;
+}
+
+p#vladFoo {
+	font-family: 'Lato', sans-serif;
+	color: black;
+}
+
