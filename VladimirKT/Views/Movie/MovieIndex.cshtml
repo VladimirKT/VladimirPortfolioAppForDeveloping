@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "MovieIndex";
+    Layout = "~/Views/Shared/_MovieLayout.cshtml";
+}
+
+<div id="rowDiv" class="row">
+	<div id="bigDiv" class="col-md-9">	
+		<img id="bigImage" class="img-responsive" src="~/Content/Images/pages/movieTape.png" />
+		<div id="indexImageDiv">
+			<img id="logoImage" class="img-responsive" src="~/Content/Images/pages/logoMovieStore.png" />
+		</div>
+	</div>
+	<div id="smallDiv" class="col-md-3">		
+			<br />
+			<img class="img-responsive" id="sliderImage1" />
+			<br />
+
+			<img class="img-responsive" id="sliderImage2" />
+			<br />
+			<div id="textSection">
+				<div id="textDiv">informations about how to use application</div>
+				<a id="aboutBtn" href="/Movie/AboutApp" class="btn btn-primary btn-lg">About Movie Store &raquo;</a>
+			</div>		
+	</div>
+</div>

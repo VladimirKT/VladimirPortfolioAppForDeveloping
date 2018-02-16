@@ -1,0 +1,62 @@
+﻿@model VladimirKT.ViewModels.MovieViewModel
+@{
+	ViewBag.Title = "MovieDetails";
+	Layout = "~/Views/Shared/_MovieLayout.cshtml";
+}
+
+<h4>Movie Details:</h4>
+<hr />
+<div class="row">
+	<div class="col-md-8">
+
+		<img src="@Model.Movie.ImagePath" class="img-responsive" alt="movies"/>
+		<br />
+		<div>
+			<h6><b>Description:</b></h6>
+			<p>@Model.Movie.Description</p>
+		</div>
+
+	</div>
+	<div class="col-md-4">
+		<h5><b>@Model.Movie.Name</b> <span>(@Model.Movie.Year)</span></h5>
+		<br />
+		<p title="Duration"><b>Duration:</b> <span>@Model.Movie.Duration</span></p>
+		<br />
+		<p title="Genre"><b>Genre:</b> <span>@Model.Movie.Genre</span></p>
+		<br />
+		<p title="actors"><b>Actors:</b> <span>@Model.Movie.Actors</span></p>
+		<br />
+		<p title="director"><b>Director:</b> <span>@Model.Movie.Director</span></p>
+		<br />
+		<p title="Price"><b>Price: <span>@Model.Movie.Price</span></b></p>
+
+		@if (User.IsInRole("CanManageCustomer"))
+		{
+			<div style="display:block">
+				
+					<form action="/Customer/BuyMovie" id="buyMovie" method="post">
+						<div class="form-group">
+							@Html.LabelFor(m => m.CardNumber)
+							@Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control", id = "cardNumber", type = "number", placeholder = "enter yours credit card number" })
+							@Html.ValidationMessageFor(m => m.CardNumber)
+						</div>
+						<div id="validationbar" style="display:none; float:none; margin-top:10px; margin-bottom:10px">
+							<span id="validationbar-label" style="color:red; font-size:medium; font-style:italic"></span>
+						</div>
+						<div class="form-group">
+							@Html.HiddenFor(m => m.Movie.Id)
+						</div>
+						<div class="form-group">
+							@Html.HiddenFor(m => m.Movie.Name)
+						</div>
+
+						@Html.AntiForgeryToken();
+						<div><button id="buyNewMovie" style="width: 20%" class="btn btn-danger">Buy</button></div>
+					</form>				
+
+           </div>
+		}
+
+
+	</div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model VladimirKT.ViewModels.MovieCustomerViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MovieLayout.cshtml";
+}
+<div style="min-height:600px" id="listOfMoviesDiv">
+	<h4>Customer:</h4>
+	<p><b>First Name: </b> @Model.Customer.FirstName</p>
+	<p><b>Last Name: </b> @Model.Customer.LastName</p>
+	<p><b>Credit card number: </b> @Model.Customer.CardNumber</p>
+	<p><b>Credit: </b> @Model.Customer.Credit $</p>
+	<p><b>Number of movies you buy: </b> @Model.Customer.NumburOfMovies</p>
+
+
+	<p><b>List of movies you buy:</b></p>
+	<ul>
+		@foreach (string name in Model.MovieNames)
+		{
+			<li>@name</li>
+		}
+
+
+	</ul>
+
+</div>
