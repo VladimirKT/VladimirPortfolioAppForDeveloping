@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="indexRow" class="row">
+    <div class="col-md-12">
+		<div id="navDiv">
+			<ul id="navBar">
+				<li>@Html.ActionLink("Home |", "Index", "Home")</li>
+				<li>@Html.ActionLink("About Me |", "About", "Home")</li>
+				<li>@Html.ActionLink("About App", "AboutApp", "Home")</li>
+			</ul>
+		</div>
+		   <div style="overflow:hidden" class="col-md-8 col-md-offset-2" id="central">
+	 	      <img style="max-height: 500px" class="img-responsive" id="mainImage1" src="~/Content/Images/pages/mi1.jpg"/>
+	 	      <img style="max-height: 500px" class="img-responsive" id="mainImage2" src="~/Content/Images/pages/mi2.jpg" />
+	 	      <img style="max-height: 500px" class="img-responsive" id="mainImage3" src="~/Content/Images/pages/mi3.jpg" />
+	 	      <img style="max-height: 500px" class="img-responsive" id="mainImage4" src="~/Content/Images/pages/mi4.jpg" />
+			  <div id="mask1"></div>
+	 	      <div id="mask2"></div>
+	 	      <div id="mask3"></div>
+	 	      <div id="mask4"><p id="namePersonal">Vladimir Kocis Tubic</p></div>
+	 	      <div id="mask5"></div>
+	 	      <div id="mask6"><p id="nameProfesional">Web developer</p></div>
+	 	      <div id="mask7"></div>
+	 	      <div id="mask8"></div>
+	 	      <div id="mask9"></div>
+		   </div>
+	    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "AboutApp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="aboutApp" class="row">
+	<div style="color:white" class="col-md-6 col-sm-12">
+		<div style="display:block">@Html.ActionLink("<< back to Home", "Index", "Home")</div>
+		<br />
+		<h4>Portfolio application</h4>
+		<p>This is my portfolio application build in ASP.NET MVC</p>
+		<p>.NET provides a lot of possibilities for making a good functional application.</p>
+		<p>Certainly in making the first part of the application I did not have the need to take advantage of these possibilities</p>
+		<p>I did not use the default in this section, so still needs to implement responsive design.</p>
+		<p>Since the entire application was made to present me as a web developer</p>
+		<p>The other part of the application I made to use developer skills I learned working with my friends in the company.</p>
+		<p>Authentication, Authorize (Roles), Edit, Delete, Get, Post data to DataBase I promote in part @Html.ActionLink("MoviStore aplication", "MovieIndex", "Movie")</p>
+		<p>Explanations for the roles and how it should be used are located within the @Html.ActionLink("About Movie Store", "AboutApp", "Movie")</p>
+	</div>
+	<div class="col-md-6 col-sm-12">
+		<a href="~/Movie/MovieIndex"><img class="img-responsive" src="~/Content/Images/pages/screenShotMovieStore.png" /></a>
+		<br />
+		@Html.ActionLink("MovieStore App", "MovieIndex", "Movie")
+	</div>
+
+</div>
+

@@ -1,0 +1,81 @@
+﻿@model VladimirKT.ViewModels.MovieViewModel
+
+@{
+	ViewBag.Title = "AddNewMovie";
+	Layout = "~/Views/Shared/_MovieLayout.cshtml";
+}
+
+
+<div class="row">
+	<div class="col-md-4">
+		<h4>Add new movie:</h4>
+
+		@using (Html.BeginForm("CreateMovie", "Movie", "Post"))
+		{
+			<div class="form-group">				
+				@Html.HiddenFor(m => m.Movie.ImagePath, new { @type = "file", id = "uploadImage" })
+				@Html.ValidationMessageFor(m => m.Movie.ImagePath)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Name)
+				@Html.TextBoxFor(m => m.Movie.Name, new { @class = "form-control", placeholder = "Name" })
+				@Html.ValidationMessageFor(m => m.Movie.Name)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Year)
+				@Html.TextBoxFor(m => m.Movie.Year, new { @class = "form-control", placeholder = "Year of production" })
+				@Html.ValidationMessageFor(m => m.Movie.Year)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Price)
+				@Html.TextBoxFor(m => m.Movie.Price, new { @class = "form-control", placeholder = "Price" })
+				@Html.ValidationMessageFor(m => m.Movie.Price)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Actors)
+				@Html.TextBoxFor(m => m.Movie.Actors, new { @class = "form-control", placeholder = "Actors" })
+				@Html.ValidationMessageFor(m => m.Movie.Actors)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Director)
+				@Html.TextBoxFor(m => m.Movie.Director, new { @class = "form-control", placeholder = "Director" })
+				@Html.ValidationMessageFor(m => m.Movie.Director)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Duration)
+				@Html.TextBoxFor(m => m.Movie.Duration, new { @class = "form-control", placeholder = "Duration" })
+				@Html.ValidationMessageFor(m => m.Movie.Duration)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Genre)
+				@Html.TextBoxFor(m => m.Movie.Genre, new { @class = "form-control", placeholder = "Genre" })
+				@Html.ValidationMessageFor(m => m.Movie.Genre)
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Movie.Description)
+				@Html.TextAreaFor(m => m.Movie.Description, new { @class = "form-control" })
+				@Html.ValidationMessageFor(m => m.Movie.Description)
+			</div>
+			@Html.AntiForgeryToken();
+			<button id="submitNewMovie" type="submit" style="width: 20%" class="btn btn-danger">Submit</button>
+			<button id="cancelNewMovie" style="width: 20%" class="btn btn-warning">Cancel</button>
+		}
+	</div>
+	<div class="col-md-8">
+		<br />
+		<div id="newImageDiv">Please upload image 550px x 350px. Format jpg or jpeg</div>
+		<img class="img-responsive" id="movieImage" />
+		<br />
+		<div id="progressbar" style="display:none; float:none; margin-top:10px; margin-bottom:-30px">
+			<span id="progressbar-label" style="color:darkgray; font-size:medium; font-style:italic">Uploading..</span>
+		</div>
+		<div id="validDiv" style="display:none; float:none; margin-top:10px; margin-bottom:-30px">
+			<span id="validLabel" style="color:red; font-size:medium; font-style:italic"></span>
+		</div>
+	</div>
+</div>
+		
+ @section scripts
+	 {
+			@Scripts.Render("~/bundles/jqueryval")
+	}
